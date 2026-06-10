@@ -1,14 +1,18 @@
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { buildSchema } from '@amritk/generate-parsers';
 import { buildValidatorSchema } from '@amritk/generate-validators';
 
-// Ahead-of-time counterpart to the runtime `cases/mjst` case: mjst's
-// `@amritk/generate-validators` emits standalone TypeScript validator source
-// from a JSON Schema at build time. The schemas mirror the runtime case
-// exactly (inline nested object, loose vs. strict via
-// `additionalProperties: false`), so the two cases measure the generated
-// straight-line validator against the runtime schema interpreter over the
-// same shapes.
+// Ahead-of-time counterpart to the runtime `cases/mjst` case, generated from
+// the same schemas (inline nested object, loose vs. strict via
+// `additionalProperties: false`):
+//
+// - `@amritk/generate-validators` emits the loose/strict validators used by
+//   the assert benchmarks and parseStrict.
+// - `@amritk/generate-parsers` emits a strict, stripUnknown parser for
+//   parseSafe: it throws on wrong types / missing required properties and
+//   builds its result from declared properties only, so unknown keys are
+//   removed at every nesting level.
 const properties = {
   number: { type: 'number' },
   negNumber: { type: 'number' },
@@ -64,25 +68,47 @@ const strictSchema = {
   additionalProperties: false,
 };
 
-async function main() {
-  // bundled to `build/generate.cjs` before running, hence the `../src`
-  const outDir = join(__dirname, '..', 'src', 'generated');
+// bundled to `build/generate.cjs` before running, hence the `../src`
+const outDir = join(__dirname, '..', 'src', 'generated');
 
+function writeFiles(dir: string, files: { filename: string; content: string }[]) {
+  for (const file of files) {
+    const target = join(dir, file.filename);
+
+    mkdirSync(dirname(target), { recursive: true });
+    writeFileSync(target, file.content);
+  }
+}
+
+async function main() {
   rmSync(outDir, { recursive: true, force: true });
 
   for (const [name, schema] of [
     ['loose', looseSchema],
     ['strict', strictSchema],
   ] as const) {
-    const files = await buildValidatorSchema(schema, 'DataType');
-    const dir = join(outDir, name);
-
-    mkdirSync(dir, { recursive: true });
-
-    for (const file of files) {
-      writeFileSync(join(dir, file.filename), file.content);
-    }
+    writeFiles(join(outDir, name), await buildValidatorSchema(schema, 'DataType'));
   }
+
+  // strict (throw on type/shape mismatches) + stripUnknown (drop undeclared
+  // keys from the result) — the parseSafe semantics. Helpers stay imports from
+  // @amritk/helpers ('package' mode): the embedded mode reads helper sources
+  // via import.meta.url, which this script loses when esbuild bundles it to
+  // CJS, and the case bundle inlines the imports anyway.
+  const parserFiles = await buildSchema(
+    looseSchema,
+    'DataType',
+    undefined,
+    undefined,
+    undefined,
+    true, // strict
+    'package',
+    './',
+    false,
+    true, // stripUnknown
+  );
+
+  writeFiles(join(outDir, 'parse'), parserFiles);
 }
 
 main().catch(error => {

@@ -7,7 +7,8 @@
       "dependencies": {
         "@aeriajs/validation": "0.0.162",
         "@ailabs/ts-utils": "1.4.0",
-        "@amritk/generate-validators": "0.8.0",
+        "@amritk/generate-parsers": "0.10.0",
+        "@amritk/generate-validators": "0.9.0",
         "@amritk/runtime-validators": "0.6.0",
         "@badrap/valita": "0.4.6",
         "@deepkit/core": "1.0.19",
@@ -119,7 +120,11 @@
 
     "@ailabs/ts-utils": ["@ailabs/ts-utils@1.4.0", "", { "dependencies": { "ramda": "^0.26.1", "seedrandom": "3.0.5", "ts-toolbelt": "^4.8.19" } }, "sha512-jO8FFfFVTBokpT5OqpUXbsnVb+C22UbfRa/z7D8NBedgc7wJ6bFFHLog90LEGoRJKh1qI/zcwjiZ2pgCXPwpLw=="],
 
-    "@amritk/generate-validators": ["@amritk/generate-validators@0.8.0", "", { "dependencies": { "@amritk/helpers": "0.10.0", "json-schema-typed": "^8.0.1" } }, "sha512-Cdcqvr7yfY2JVe3WNQVwNLWyzTyKm153N4yg20lRAKT4Fe6ShdE8jSfojKSx90tEXFtPkhku1/E0DKaON98uAg=="],
+    "@amritk/generate-markdown": ["@amritk/generate-markdown@0.2.4", "", {}, "sha512-21mDNDpp0jqjnUL516vNqUiVKbNUpC/xqMO5bpTJfgfMIQ4M8gwKx1vIbDCYhaCkTDE+bsOlmFTUFhcyXPQ1sA=="],
+
+    "@amritk/generate-parsers": ["@amritk/generate-parsers@0.10.0", "", { "dependencies": { "@amritk/generate-markdown": "0.2.4", "@amritk/helpers": "0.10.0", "json-schema-typed": "^8.0.1" } }, "sha512-L9/zGyN3oLzQNL3x5P31HbeHgfAz0xPoKDuCSU2RA/ef/TTpi2+YoAHAQSny/DownHGdsPvYOO8rrA/JihuGug=="],
+
+    "@amritk/generate-validators": ["@amritk/generate-validators@0.9.0", "", { "dependencies": { "@amritk/helpers": "0.10.0", "json-schema-typed": "^8.0.1" } }, "sha512-7ZFLi2SvNLPtDR/edzYLXRfq8G2xsCVmtiuiSKbxU1a7t7X+HFqELb+fvPyExi17nkTd9oevW5meOo8BDrhCRg=="],
 
     "@amritk/helpers": ["@amritk/helpers@0.10.0", "", { "dependencies": { "json-schema-typed": "^8.0.1" } }, "sha512-WlzF5pRkMTkhKHZ2RGEIdQ61lOsJXXRn6MWVKTrZyqLSfrsTHfBgEsTd70lSilkeAvzwezuxD5CV4Tzz5vo/1g=="],
 

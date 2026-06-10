@@ -1,13 +1,20 @@
-import { validateDataTypeLoose, validateDataTypeStrict } from './build';
+import {
+  parseDataType,
+  validateDataTypeLoose,
+  validateDataTypeStrict,
+} from './build';
 import { addCase } from '../../benchmarks';
 
 // Ahead-of-time compiled counterpart to the runtime `mjst` case. The
-// validator source is generated from the same schemas by
-// `@amritk/generate-validators` (see `src/generate.ts`), so this measures the
-// generated straight-line validator against the runtime schema interpreter.
-//
-// No `parseSafe` benchmark: validators check the input in place and don't
-// strip unknown keys (same as ajv).
+// validators and the parser are generated from the same schemas (see
+// `src/generate.ts`): `@amritk/generate-validators` for the assert benchmarks
+// and parseStrict, `@amritk/generate-parsers` (strict + stripUnknown) for
+// parseSafe, which throws on invalid input and removes unknown keys from the
+// result at every nesting level.
+
+addCase('mjst-(ahead-of-time)', 'parseSafe', data => {
+  return parseDataType(data);
+});
 
 addCase('mjst-(ahead-of-time)', 'parseStrict', data => {
   if (validateDataTypeStrict(data) !== true) {
