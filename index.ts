@@ -61,6 +61,16 @@ async function main() {
               stdio: 'inherit',
             });
           }
+          if (c === 'mjst') {
+            childProcess.execSync('npm run compile:mjst', {
+              stdio: 'inherit',
+            });
+          }
+          if (c === 'mjst-aot') {
+            childProcess.execSync('npm run compile:mjst-aot', {
+              stdio: 'inherit',
+            });
+          }
 
           const cmd = [...process.argv.slice(0, 2), 'run-internal', c];
 

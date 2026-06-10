@@ -12,3 +12,7 @@ cases/paseri/src/index.ts
 cases/paseri/build
 cases/paseri-aot/src
 cases/paseri-aot/build
+cases/mjst/src
+cases/mjst/build
+cases/mjst-aot/src
+cases/mjst-aot/build

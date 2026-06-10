@@ -1,11 +1,14 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "typescript-runtime-type-benchmarks",
       "dependencies": {
         "@aeriajs/validation": "0.0.162",
         "@ailabs/ts-utils": "1.4.0",
+        "@amritk/generate-validators": "0.6.0",
+        "@amritk/runtime-validators": "0.6.0",
         "@badrap/valita": "0.4.6",
         "@deepkit/core": "1.0.19",
         "@deepkit/type": "1.0.19",
@@ -115,6 +118,12 @@
     "@aeriajs/validation": ["@aeriajs/validation@0.0.162", "", { "peerDependencies": { "@aeriajs/common": "^0.0.144", "@aeriajs/entrypoint": "^0.0.149", "@aeriajs/types": "^0.0.126", "mongodb": "^6.5.0" } }, "sha512-24A8u04ecEYDACD2tRIwsVOwA9rsNV1Yw4rrD7TYzlwBVxMhQRorv/owXOyEZq33gVsSSxOKFi1/u+sxk6UdeA=="],
 
     "@ailabs/ts-utils": ["@ailabs/ts-utils@1.4.0", "", { "dependencies": { "ramda": "^0.26.1", "seedrandom": "3.0.5", "ts-toolbelt": "^4.8.19" } }, "sha512-jO8FFfFVTBokpT5OqpUXbsnVb+C22UbfRa/z7D8NBedgc7wJ6bFFHLog90LEGoRJKh1qI/zcwjiZ2pgCXPwpLw=="],
+
+    "@amritk/generate-validators": ["@amritk/generate-validators@0.6.0", "", { "dependencies": { "@amritk/helpers": "0.8.0", "json-schema-typed": "^8.0.1" } }, "sha512-6yfNmcSX2oL257jmITOk/orI0Ll70snPtnj4gNdkFk0HkmW3ELyUbro1T6y7z2BD+RA9tAamPP/+4PHQ79XxfA=="],
+
+    "@amritk/helpers": ["@amritk/helpers@0.8.0", "", { "dependencies": { "json-schema-typed": "^8.0.1" } }, "sha512-AURfbsHfGEAwtVi4ORfflRyJDxuiwSm8KlXaXO+U2i0PEWqBMKdnLrq/R4RsEiXn1UnRqA2whmrwjchcN+e/SQ=="],
+
+    "@amritk/runtime-validators": ["@amritk/runtime-validators@0.6.0", "", { "dependencies": { "json-schema-typed": "^8.0.1" } }, "sha512-ynheH4ornddN7grmhMLVHZK8T8Brnm/fTPDFknrUVqdd4IRIo5I9GFtUX6UYDMSx4JKjMMjFDZYq85Gi07DC/A=="],
 
     "@ark/schema": ["@ark/schema@0.56.0", "", { "dependencies": { "@ark/util": "0.56.0" } }, "sha512-ECg3hox/6Z/nLajxXqNhgPtNdHWC9zNsDyskwO28WinoFEnWow4IsERNz9AnXRhTZJnYIlAJ4uGn3nlLk65vZA=="],
 
@@ -1057,6 +1066,8 @@
     "json-parse-even-better-errors": ["json-parse-even-better-errors@2.3.1", "", {}, "sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w=="],
 
     "json-schema-traverse": ["json-schema-traverse@1.0.0", "", {}, "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug=="],
+
+    "json-schema-typed": ["json-schema-typed@8.0.2", "", {}, "sha512-fQhoXdcvc3V28x7C7BMs4P5+kNlgUURe2jmUT1T//oBRMDrqy1QPelJimwZGo7Hg9VPV3EQV5Bnq4hbFy2vetA=="],
 
     "json-stable-stringify-without-jsonify": ["json-stable-stringify-without-jsonify@1.0.1", "", {}, "sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw=="],
 
