@@ -144,6 +144,21 @@ npm run preview # preview the build
 When viewing results locally, you will need to restart the app whenever the
 results are updated.
 
+#### Developing against a local mjst checkout
+
+The `mjst` and `mjst-(ahead-of-time)` cases normally use the published
+`@amritk/*` releases. To benchmark a working copy instead — e.g. while
+optimizing mjst — clone it next to this repo (so it sits at `../mjst`, or
+point `MJST_DIR` at it) and link it in:
+
+* `npm run link:mjst` - install + build the local mjst and symlink the
+  `@amritk/*` packages at it. The `compile:mjst{,-aot}` esbuild steps then
+  bundle mjst's TypeScript source directly (via the `development` export
+  condition), so source edits show up on the next compile with no rebuild.
+* `npm run start run mjst mjst-aot` - recompile from local source and run just
+  the mjst cases.
+* `npm run unlink:mjst` - restore the published `@amritk/*` releases.
+
 #### Linting
 
 * `npm run lint` - lint all files
