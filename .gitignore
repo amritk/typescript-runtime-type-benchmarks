@@ -164,6 +164,11 @@ cases/ts-auto-guard/src/index.guard.ts
 cases/type-predicate-generator/build
 cases/type-predicate-generator/src/index_guards.ts
 
+# mjst build artifacts and generated validators
+cases/mjst/build
+cases/mjst-aot/build
+cases/mjst-aot/src/generated
+
 # Paseri
 cases/paseri/build
 

@@ -15,6 +15,8 @@ export const cases = [
   'json-decoder',
   'mol_data',
   'mojotech-json-type-validation',
+  'mjst',
+  'mjst-aot',
   'mondrian-framework',
   'myzod',
   'ok-computer',
