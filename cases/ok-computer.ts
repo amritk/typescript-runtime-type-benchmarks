@@ -36,11 +36,11 @@ const dataTypeLoose = object(
 );
 
 addCase('ok-computer', 'assertStrict', (data: UnknownData) => {
-  assert(dataType(data));
+  assert(data, dataType);
   return true;
 });
 
 addCase('ok-computer', 'assertLoose', (data: UnknownData) => {
-  assert(dataTypeLoose(data));
+  assert(data, dataTypeLoose);
   return true;
 });

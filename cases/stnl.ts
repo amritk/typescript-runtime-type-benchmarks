@@ -1,4 +1,4 @@
-import { build, t } from 'stnl';
+import { t, toJSONCheck } from 'stnl';
 
 import { createCase } from '../benchmarks';
 
@@ -17,7 +17,7 @@ const assertLoose = t.dict({
 });
 
 createCase('stnl (just-in-time)', 'assertLoose', () => {
-  const check = build.json.assert.compile(assertLoose);
+  const check = toJSONCheck.compile(assertLoose);
 
   return data => {
     if (check(data)) return true;

@@ -1,4 +1,4 @@
-import { boolean, exact, guard, number, object, string } from 'decoders';
+import { boolean, exact, number, object, string } from 'decoders';
 import { createCase } from '../benchmarks';
 
 createCase('decoders', 'parseSafe', () => {
@@ -16,7 +16,7 @@ createCase('decoders', 'parseSafe', () => {
     }),
   });
 
-  const dataTypeGuard = guard(dataType);
+  const dataTypeGuard = dataType.verify;
 
   return data => {
     return dataTypeGuard(data);
@@ -38,7 +38,7 @@ const dataTypeStrict = exact({
 });
 
 createCase('decoders', 'parseStrict', () => {
-  const dataTypeGuardStrict = guard(dataTypeStrict);
+  const dataTypeGuardStrict = dataTypeStrict.verify;
 
   return data => {
     return dataTypeGuardStrict(data);
@@ -46,7 +46,7 @@ createCase('decoders', 'parseStrict', () => {
 });
 
 createCase('decoders', 'assertStrict', () => {
-  const dataTypeGuardStrict = guard(dataTypeStrict);
+  const dataTypeGuardStrict = dataTypeStrict.verify;
 
   return data => {
     dataTypeGuardStrict(data);

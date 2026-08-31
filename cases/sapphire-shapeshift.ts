@@ -3,16 +3,16 @@ import { createCase } from '../benchmarks';
 
 createCase('@sapphire/shapeshift', 'parseSafe', () => {
   const dataType = s.object({
-    number: s.number,
-    negNumber: s.number,
-    maxNumber: s.number,
-    string: s.string,
-    longString: s.string,
-    boolean: s.boolean,
+    number: s.number(),
+    negNumber: s.number(),
+    maxNumber: s.number(),
+    string: s.string(),
+    longString: s.string(),
+    boolean: s.boolean(),
     deeplyNested: s.object({
-      foo: s.string,
-      num: s.number,
-      bool: s.boolean,
+      foo: s.string(),
+      num: s.number(),
+      bool: s.boolean(),
     }),
   });
 
@@ -23,18 +23,18 @@ createCase('@sapphire/shapeshift', 'parseSafe', () => {
 
 createCase('@sapphire/shapeshift', 'parseStrict', () => {
   const dataType = s.object({
-    number: s.number,
-    negNumber: s.number,
-    maxNumber: s.number,
-    string: s.string,
-    longString: s.string,
-    boolean: s.boolean,
+    number: s.number(),
+    negNumber: s.number(),
+    maxNumber: s.number(),
+    string: s.string(),
+    longString: s.string(),
+    boolean: s.boolean(),
     deeplyNested: s.object({
-      foo: s.string,
-      num: s.number,
-      bool: s.boolean,
-    }).strict,
-  }).strict;
+      foo: s.string(),
+      num: s.number(),
+      bool: s.boolean(),
+    }).strict(),
+  }).strict();
 
   return data => {
     return dataType.parse(data);
@@ -43,18 +43,18 @@ createCase('@sapphire/shapeshift', 'parseStrict', () => {
 
 createCase('@sapphire/shapeshift', 'assertLoose', () => {
   const dataType = s.object({
-    number: s.number,
-    negNumber: s.number,
-    maxNumber: s.number,
-    string: s.string,
-    longString: s.string,
-    boolean: s.boolean,
+    number: s.number(),
+    negNumber: s.number(),
+    maxNumber: s.number(),
+    string: s.string(),
+    longString: s.string(),
+    boolean: s.boolean(),
     deeplyNested: s.object({
-      foo: s.string,
-      num: s.number,
-      bool: s.boolean,
-    }).passthrough,
-  }).passthrough;
+      foo: s.string(),
+      num: s.number(),
+      bool: s.boolean(),
+    }).passthrough(),
+  }).passthrough();
 
   return data => {
     dataType.parse(data);
@@ -65,18 +65,18 @@ createCase('@sapphire/shapeshift', 'assertLoose', () => {
 
 createCase('@sapphire/shapeshift', 'assertStrict', () => {
   const dataType = s.object({
-    number: s.number,
-    negNumber: s.number,
-    maxNumber: s.number,
-    string: s.string,
-    longString: s.string,
-    boolean: s.boolean,
+    number: s.number(),
+    negNumber: s.number(),
+    maxNumber: s.number(),
+    string: s.string(),
+    longString: s.string(),
+    boolean: s.boolean(),
     deeplyNested: s.object({
-      foo: s.string,
-      num: s.number,
-      bool: s.boolean,
-    }).strict,
-  }).strict;
+      foo: s.string(),
+      num: s.number(),
+      bool: s.boolean(),
+    }).strict(),
+  }).strict();
 
   return data => {
     dataType.parse(data);

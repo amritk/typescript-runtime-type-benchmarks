@@ -4,11 +4,11 @@ import parse, {
   parseAsNumber,
   parseAsString,
 } from 'parse-dont-validate';
-import { addCase } from '../benchmarks';
+import { type UnknownData, addCase } from '../benchmarks';
 
 addCase('parse-dont-validate (chained function)', 'parseSafe', data =>
   parse(data)
-    .asMutableObject(data => ({
+    .asMutableObject((data: UnknownData) => ({
       number: parse(data.number).asNumber().elseThrow('number is not a number'),
       negNumber: parse(data.negNumber)
         .asNumber()
@@ -32,7 +32,7 @@ addCase('parse-dont-validate (chained function)', 'parseSafe', data =>
         .asBoolean()
         .elseThrow('boolean is not a boolean'),
       deeplyNested: parse(data.deeplyNested)
-        .asMutableObject(deeplyNested => ({
+        .asMutableObject((deeplyNested: UnknownData) => ({
           foo: parse(deeplyNested.foo)
             .asString()
             .elseThrow('foo is not a string'),
@@ -53,7 +53,7 @@ addCase('parse-dont-validate (named parameters)', 'parseSafe', data =>
     object: data,
     ifParsingFailThen: 'throw',
     message: 'data is not an object',
-    parse: data => ({
+    parse: (data: UnknownData) => ({
       number: parseAsNumber({
         number: data.number,
         ifParsingFailThen: 'throw',
@@ -94,7 +94,7 @@ addCase('parse-dont-validate (named parameters)', 'parseSafe', data =>
       }),
       deeplyNested: parseAsMutableObject({
         object: data.deeplyNested,
-        parse: deeplyNested => ({
+        parse: (deeplyNested: UnknownData) => ({
           foo: parseAsString({
             string: deeplyNested.foo,
             ifParsingFailThen: 'throw',
