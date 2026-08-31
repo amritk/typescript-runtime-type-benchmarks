@@ -45,7 +45,7 @@
     "@mondrian-framework/model": "2.0.69",
     "@paseri/compiler": "npm:@jsr/paseri__compiler@0.7.7",
     "@paseri/paseri": "npm:@jsr/paseri__paseri@1.9.7",
-    "@sapphire/shapeshift": "5.0.0",
+    "@sapphire/shapeshift": "4.0.0",
     "@sinclair/typebox": "0.34.52",
     "@sinclair/typemap": "0.10.1",
     "@skarab/tson": "1.5.1",
