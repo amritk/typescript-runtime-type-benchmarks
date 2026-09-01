@@ -4,9 +4,9 @@ import * as vegaLite from 'vega-lite';
 
 // which results are attempted to load
 // the first is selected automatically
-const NODE_VERSIONS = [24, 23, 22, 21, 20];
+const NODE_VERSIONS = [26, 24, 23, 22, 21, 20];
 
-const BUN_VERSIONS = [1.2];
+const BUN_VERSIONS = [1.4, 1.2];
 
 const DENO_VERSIONS = [2];
 

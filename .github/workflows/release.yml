@@ -34,6 +34,7 @@ jobs:
           - 22.x
           - 23.x
           - 24.x
+          - 26.x
 
     steps:
       - uses: actions/checkout@v4
@@ -89,8 +90,14 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
+        # benchmarked bun versions must be kept in sync with:
+        #  - bun-version matrix in pr.yml
+        #  - BUN_VERSIONS in app.tsx
+        # results are bucketed per major.minor version, so only one patch
+        # release per major.minor may be listed here
         bun-version:
             - 1.2.12
+            - 1.4.0
 
     steps:
       - uses: actions/checkout@v4
@@ -134,8 +141,13 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
+        # benchmarked deno versions must be kept in sync with:
+        #  - deno-version matrix in pr.yml
+        #  - DENO_VERSIONS in app.tsx
+        # results are bucketed per major version, so only one release per
+        # major may be listed here
         deno-version:
-            - 2.1.9
+            - 2.9.6
 
     steps:
       - uses: actions/checkout@v4

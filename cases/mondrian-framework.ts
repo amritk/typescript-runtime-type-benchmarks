@@ -1,3 +1,5 @@
+// must be imported before '@mondrian-framework/model', see the module docs
+import '../benchmarks/helpers/slow-buffer-compat';
 import { createCase } from '../benchmarks';
 import { model } from '@mondrian-framework/model';
 
