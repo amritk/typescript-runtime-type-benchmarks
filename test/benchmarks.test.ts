@@ -19,6 +19,7 @@ import '../cases/io-ts';
 import '../cases/joi';
 import '../cases/jointz';
 import '../cases/json-decoder';
+import '../cases/mjst';
 import '../cases/mol_data';
 import '../cases/mojotech-json-type-validation';
 import '../cases/mondrian-framework';

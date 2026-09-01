@@ -177,3 +177,7 @@ bun.lockb
 # ts-runtypes build artifacts
 cases/ts-runtypes/build
 cases/ts-runtypes/src/__runtypes
+
+# mjst build artifacts and generated parsers
+cases/mjst/build
+cases/mjst/src/generated

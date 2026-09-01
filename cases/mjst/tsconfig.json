@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "build",
+    "strict": true,
+    // the generated validators use `Object.hasOwn`, which the repo-wide
+    // ES2021 lib does not declare
+    "lib": ["ES2022", "DOM"],
+    "target": "ES2022"
+  },
+  "include": ["src/**/*.ts"],
+  // the root config excludes `cases/mjst/src` (it cannot be checked with the
+  // repo-wide lib), so the inherited excludes have to be dropped here
+  "exclude": []
+}

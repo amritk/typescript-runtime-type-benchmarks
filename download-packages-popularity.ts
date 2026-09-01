@@ -55,6 +55,10 @@ export const packages = [
     packageName: 'json-decoder',
   },
   {
+    name: 'mjst',
+    packageName: '@amritk/mjst',
+  },
+  {
     name: '$mol_data',
     packageName: 'mol_data_all',
   },

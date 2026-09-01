@@ -61,6 +61,11 @@ async function main() {
               stdio: 'inherit',
             });
           }
+          if (c === 'mjst') {
+            childProcess.execSync('npm run compile:mjst', {
+              stdio: 'inherit',
+            });
+          }
           if (c === 'ts-runtypes') {
             childProcess.execSync('npm run compile:ts-runtypes', {
               stdio: 'inherit',
