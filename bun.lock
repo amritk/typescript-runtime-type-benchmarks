@@ -6,7 +6,7 @@
       "dependencies": {
         "@aeriajs/validation": "0.0.162",
         "@ailabs/ts-utils": "1.4.0",
-        "@amritk/mjst": "0.15.0",
+        "@amritk/mjst": "0.16.0",
         "@badrap/valita": "0.5.4",
         "@deepkit/core": "1.0.19",
         "@deepkit/type": "1.0.19",
@@ -121,25 +121,25 @@
 
     "@ailabs/ts-utils": ["@ailabs/ts-utils@1.4.0", "", { "dependencies": { "ramda": "^0.26.1", "seedrandom": "3.0.5", "ts-toolbelt": "^4.8.19" } }, "sha512-jO8FFfFVTBokpT5OqpUXbsnVb+C22UbfRa/z7D8NBedgc7wJ6bFFHLog90LEGoRJKh1qI/zcwjiZ2pgCXPwpLw=="],
 
-    "@amritk/adapters": ["@amritk/adapters@0.5.0", "", { "dependencies": { "@amritk/helpers": "^0.16.0", "json-schema-typed": "^8.0.1" }, "peerDependencies": { "@valibot/to-json-schema": ">=1", "effect": ">=3", "valibot": ">=1", "zod": ">=3", "zod-to-json-schema": ">=3" }, "optionalPeers": ["@valibot/to-json-schema", "effect", "valibot", "zod", "zod-to-json-schema"] }, "sha512-+sBxhK8UcUpEdktviO1V4jOHcn5SG4cod8eMnBAnDeLm7kHdvvO+D8DIU6WYNVL6Q1yLIQn9+uk3s9NO5dPCrA=="],
+    "@amritk/adapters": ["@amritk/adapters@0.5.1", "", { "dependencies": { "@amritk/helpers": "^0.17.0", "json-schema-typed": "^8.0.1" }, "peerDependencies": { "@valibot/to-json-schema": ">=1", "effect": ">=3", "valibot": ">=1", "zod": ">=3", "zod-to-json-schema": ">=3" }, "optionalPeers": ["@valibot/to-json-schema", "effect", "valibot", "zod", "zod-to-json-schema"] }, "sha512-xZ/Xss+q5tiGT8sb/qzYIisAjTpJuYlHJ5tC/0eHynmonoUtZkyu1EFc7QXCzGAVVtps9reUn4Pc8KVVlAYuXA=="],
 
-    "@amritk/api": ["@amritk/api@0.16.0", "", { "dependencies": { "@amritk/runtime-validators": "^0.12.0" } }, "sha512-CsLLFmhpI3apC2HhWKq9VuUUfx+feqapmt5TGJvWaTvUUJhaTvBTyAjrEJ1IxIPmcKC5SSXTdTG/ZVYPt2LMrg=="],
+    "@amritk/api": ["@amritk/api@0.16.1", "", { "dependencies": { "@amritk/runtime-validators": "^0.12.1" } }, "sha512-hMJn5xiipdUyriJpXMIZlYDNyGsQtjlip84ukiFkIojyDAtdiVKzbHUC31Klj9DZMqSHJyA+Kd0jWOrdfart+g=="],
 
-    "@amritk/generate-examples": ["@amritk/generate-examples@0.7.0", "", { "dependencies": { "@amritk/helpers": "^0.16.0", "@amritk/runtime-validators": "^0.12.0", "json-schema-typed": "^8.0.1" }, "peerDependencies": { "fast-check": ">=3" }, "optionalPeers": ["fast-check"] }, "sha512-AV8TKisAFqKYobAL3YCRMd5z+y4G+O+9yPW4DkTRB5u3r/cAfOTeRH5YaPC99VIwwcizX68vR0UAeRuympM9bQ=="],
+    "@amritk/generate-examples": ["@amritk/generate-examples@0.8.0", "", { "dependencies": { "@amritk/helpers": "^0.17.0", "@amritk/runtime-validators": "^0.12.1", "json-schema-typed": "^8.0.1" }, "peerDependencies": { "fast-check": ">=3" }, "optionalPeers": ["fast-check"] }, "sha512-LI0pAJnmiahuVpC8qCasRz/7UQLEo9XI+QjQSQyJzIWHAMATBlIbNF9mZ35/YZH8168x2na/yZjk1CMUte5oew=="],
 
-    "@amritk/generate-parsers": ["@amritk/generate-parsers@0.19.5", "", { "dependencies": { "@amritk/helpers": "^0.16.0", "json-schema-typed": "^8.0.1" } }, "sha512-yxGgXBZPgn8rh5iW+lP5CXnEkUt5A+ubuK+l9qReCFbuzH0Q9c5lPrkyiNOct+MW+7aY+p9EgU3Va3P2eGHYTw=="],
+    "@amritk/generate-parsers": ["@amritk/generate-parsers@0.20.0", "", { "dependencies": { "@amritk/helpers": "^0.17.0", "json-schema-typed": "^8.0.1" } }, "sha512-lguM09+Eze48Y4Nc2lGDZpeno/tGqO3yf4vikYYuN4iuGNUTYQ8iTiWtPZYe+Y6OYfeT8LjABQgenC5p3WonBw=="],
 
-    "@amritk/generate-validators": ["@amritk/generate-validators@0.14.0", "", { "dependencies": { "@amritk/helpers": "^0.16.0", "json-schema-typed": "^8.0.1" } }, "sha512-VQLSfpm3TeOEyhqdXkBSWVsv4+EJNCebR+TviElv0ezgsoWNyxNT377mlb0N+KCrvsNWt0cvTzq1JU3C5J7Bkg=="],
+    "@amritk/generate-validators": ["@amritk/generate-validators@0.15.0", "", { "dependencies": { "@amritk/helpers": "^0.17.0", "json-schema-typed": "^8.0.1" } }, "sha512-Op5kW4do95IMb3UA7Y4muDLB+YI9MwljPVKAP5tTlhXR8Phq6i7L1mnSdStfie2vCl5BHn4flb/5E7ydthI2Cg=="],
 
-    "@amritk/helpers": ["@amritk/helpers@0.16.0", "", { "dependencies": { "json-schema-typed": "^8.0.1" } }, "sha512-RRM5kMe+DxONwRt4E8tDGpCRVS8WZ62gNFgzVZ/ckfZyLTKccQMmKCtQYHoBD1pss3W0PuthyNCLAteRkgvWew=="],
+    "@amritk/helpers": ["@amritk/helpers@0.17.0", "", { "dependencies": { "json-schema-typed": "^8.0.1" } }, "sha512-/QY1ODtxSc2iwEyVXdxTDuL27sbEZJyy57c+JYEQtwUKE1nH3ToUXnpPUcrIv364HVVG5RGaI6bGuNzI/t6GaQ=="],
 
-    "@amritk/lint": ["@amritk/lint@0.5.0", "", { "dependencies": { "@amritk/runtime-validators": "^0.12.0", "@amritk/yaml": "^0.7.2", "jsonc-parser": "^3.3.1" } }, "sha512-MUmXNTxV2yO6w9Y8lh+s7kprg50aDFkytxqog9i+BTp4drbaGkPYWmTpH4t0TjbzZbF0m4tgrZffaPr00d4yFg=="],
+    "@amritk/lint": ["@amritk/lint@0.5.1", "", { "dependencies": { "@amritk/runtime-validators": "^0.12.1", "@amritk/yaml": "^0.7.2", "jsonc-parser": "^3.3.1" } }, "sha512-P1nlc4RcjUwSOHklicPFD25nF7YakzCPItMflAc9zjbSfh7ThFEAW+Pw7Yv/c5/OKw0VVywh8yYimHp/BFv3oA=="],
 
-    "@amritk/mjst": ["@amritk/mjst@0.15.0", "", { "dependencies": { "@amritk/adapters": "^0.5.0", "@amritk/api": "^0.16.0", "@amritk/generate-examples": "^0.7.0", "@amritk/generate-parsers": "^0.19.5", "@amritk/generate-validators": "^0.14.0", "@amritk/helpers": "^0.16.0", "@amritk/lint": "^0.5.0", "@amritk/resolve-refs": "^0.7.1", "@amritk/yaml": "^0.7.2", "fast-glob": "^3.3.2", "json-schema-typed": "^8.0.1", "yargs": "^17.7.2" }, "bin": { "mjst": "dist/cli.js" } }, "sha512-zxz3cQ35yY3cxXWR0VUy9caG+poN0xDfKCwqUXlUK3x8Igb/u85vW9lRFammiqeu6tCTGM8O+CAjGkdB8NmnpA=="],
+    "@amritk/mjst": ["@amritk/mjst@0.16.0", "", { "dependencies": { "@amritk/adapters": "^0.5.1", "@amritk/api": "^0.16.1", "@amritk/generate-examples": "^0.8.0", "@amritk/generate-parsers": "^0.20.0", "@amritk/generate-validators": "^0.15.0", "@amritk/helpers": "^0.17.0", "@amritk/lint": "^0.5.1", "@amritk/resolve-refs": "^0.7.1", "@amritk/yaml": "^0.7.2", "fast-glob": "^3.3.2", "json-schema-typed": "^8.0.1", "yargs": "^17.7.2" }, "bin": { "mjst": "dist/cli.js" } }, "sha512-hbaeLM/MWo8ARKQzZ2WEQXAwOjDFRWNqt4ue+l1iKCIuslmE6CUjVNA3KV0PbIqzjYSPyBAdm+1vrMvJeOtE3g=="],
 
     "@amritk/resolve-refs": ["@amritk/resolve-refs@0.7.1", "", {}, "sha512-MhLXPrHt04t1i+2ScdBrXuh5fqfRolRnaSF8YEM7shKAv3YCWsPrSEMKD97wLd8e7jDgnhFMHzmdj2DFd5FFKA=="],
 
-    "@amritk/runtime-validators": ["@amritk/runtime-validators@0.12.0", "", {}, "sha512-3sBuB1u8XXBtwts7GQXN9YuLfWeWNDhGXEztlBhO/IoTKF3NebITufIo009CTTVQXUzf8tMZTWsd00WcFyj/UQ=="],
+    "@amritk/runtime-validators": ["@amritk/runtime-validators@0.12.1", "", {}, "sha512-NT7plb/RuS3TenbyyczNklU+hIceZSw53U52eF+ERdEuXbIHUDphCSMaUkuZQpGBoMmrmUfkjDFgPhqWvVNOVg=="],
 
     "@amritk/yaml": ["@amritk/yaml@0.7.2", "", {}, "sha512-WQQOVhe3eZM4UMRvjoHuvi0kCyNozt6dIWhAoZMM5KZLNWfG7Kasc9X6sTrC3ZAGb28P9gl5AD4WSNMUJddG4w=="],
 

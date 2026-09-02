@@ -33,7 +33,7 @@
   "dependencies": {
     "@aeriajs/validation": "0.0.162",
     "@ailabs/ts-utils": "1.4.0",
-    "@amritk/mjst": "0.15.0",
+    "@amritk/mjst": "0.16.0",
     "@badrap/valita": "0.5.4",
     "@deepkit/core": "1.0.19",
     "@deepkit/type": "1.0.19",
