@@ -26,7 +26,7 @@
     "compile:ts-auto-guard": "rimraf cases/ts-auto-guard/build && ts-auto-guard --project cases/ts-auto-guard/tsconfig.json && tsc -p cases/ts-auto-guard/tsconfig.json",
     "compile:type-predicate-generator": "./cases/type-predicate-generator/compile.sh",
     "compile:ts-runtypes": "rimraf cases/ts-runtypes/build && node cases/ts-runtypes/build.mjs && tsc --emitDeclarationOnly --declaration --noEmit false --rootDir cases/ts-runtypes/src --outDir cases/ts-runtypes/build cases/ts-runtypes/src/index.ts",
-    "compile:mjst": "rimraf cases/mjst/build cases/mjst/src/generated && esbuild cases/mjst/src/generate.ts --bundle --platform=node --format=esm --outfile=cases/mjst/build/generate.mjs && node cases/mjst/build/generate.mjs && esbuild cases/mjst/src/index.ts --bundle --minify --platform=node --outdir=cases/mjst/build && tsc -p cases/mjst/tsconfig.json",
+    "compile:mjst": "rimraf cases/mjst/build cases/mjst/src/generated && esbuild cases/mjst/src/generate.ts --bundle --platform=node --format=esm --outfile=cases/mjst/build/generate.mjs && node cases/mjst/build/generate.mjs && tsc -p cases/mjst/tsconfig.json",
     "prepare": "ts-patch install",
     "download-packages-popularity": "ts-node download-packages-popularity.ts"
   },
