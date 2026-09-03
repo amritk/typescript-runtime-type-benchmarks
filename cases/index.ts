@@ -14,6 +14,7 @@ export const cases = [
   'joi',
   'jointz',
   'json-decoder',
+  'mjst',
   'mol_data',
   'mojotech-json-type-validation',
   'mondrian-framework',
