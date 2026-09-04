@@ -147,6 +147,9 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 
+# typebox generator bundle (the generated check-*.ts files are committed)
+cases/typebox/build/generate.cjs
+
 # spectype build artifacts
 cases/spectypes/build
 
